@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" fill="none" role="img" aria-label="Cosine Technologies">
+  <defs>
+    <linearGradient id="ct-arc" x1="8" y1="6" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EEF1F5"/>
+      <stop offset="0.45" stop-color="#C0C7D1"/>
+      <stop offset="1" stop-color="#7E8794"/>
+    </linearGradient>
+    <linearGradient id="ct-shield" x1="34" y1="19" x2="34" y2="51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E4E86"/>
+      <stop offset="1" stop-color="#0A2342"/>
+    </linearGradient>
+  </defs>
+
+  <!-- circuit accents -->
+  <g stroke="#0078D4" stroke-width="2" stroke-linecap="round">
+    <path d="M2 24 H12"/>
+    <path d="M2 40 H12"/>
+    <path d="M5 16 H15"/>
+    <path d="M5 48 H15"/>
+  </g>
+  <g fill="#0078D4">
+    <circle cx="2" cy="24" r="2.4"/>
+    <circle cx="2" cy="40" r="2.4"/>
+    <circle cx="5" cy="16" r="2.2"/>
+    <circle cx="5" cy="48" r="2.2"/>
+  </g>
+
+  <!-- "C" arc -->
+  <path d="M51.7 13 A 26 26 0 1 0 51.7 51" stroke="url(#ct-arc)" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+
+  <!-- shield -->
+  <path d="M34 19 L47 23 V35 C47 43 41 48 34 51 C27 48 21 43 21 35 V23 Z" fill="url(#ct-shield)" stroke="#0078D4" stroke-width="1.6"/>
+
+  <!-- padlock -->
+  <path d="M30.5 33 V30.3 A3.5 3.5 0 0 1 37.5 30.3 V33" stroke="#C0C7D1" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="28.5" y="33" width="11" height="9" rx="1.8" fill="#C0C7D1"/>
+  <circle cx="34" cy="36.8" r="1.5" fill="#0A2342"/>
+  <rect x="33.2" y="37.2" width="1.6" height="3.2" rx="0.8" fill="#0A2342"/>
+</svg>

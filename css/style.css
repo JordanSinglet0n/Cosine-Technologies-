@@ -1,28 +1,31 @@
 /* =============================================
    COSINE TECHNOLOGIES — CMMC CONSULTING
-   Design: Navy/slate authority + electric blue accent
-   Fonts: DM Serif Display (headlines) + Inter (body)
+   Brand: deep navy authority + Cosine blue + silver
+   Palette: #0A2342 · #0078D4 · #C0C7D1
+   Fonts: Orbitron (display) + Montserrat (body)
    ============================================= */
 
 /* TOKENS */
 :root {
-  --navy:      #0B1628;
-  --navy-mid:  #152035;
-  --navy-lite: #1E2F4A;
-  --slate:     #3D5A80;
-  --electric:  #1A8FFF;
-  --electric-dark: #0070DD;
-  --sky:       #E8F4FF;
+  --navy:      #0A2342;
+  --navy-mid:  #0D1A2D;
+  --navy-lite: #1D2E48;
+  --ink:       #0F1115;
+  --slate:     #4D5563;
+  --electric:  #0078D4;
+  --electric-dark: #005FA8;
+  --silver:    #C0C7D1;
+  --sky:       #E8F1FB;
   --white:     #FFFFFF;
-  --off-white: #F5F8FC;
-  --text:      #1A2332;
-  --text-mid:  #4A5568;
-  --text-lite: #7A8BA0;
-  --border:    #D8E4F0;
-  --success:   #10B981;
+  --off-white: #F4F6F9;
+  --text:      #0F1115;
+  --text-mid:  #4D5563;
+  --text-lite: #8A93A0;
+  --border:    #D6DDE6;
+  --success:   #0078D4;
 
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Orbitron', 'Montserrat', system-ui, sans-serif;
+  --font-body:    'Montserrat', system-ui, sans-serif;
 
   --radius:  8px;
   --radius-lg: 16px;
@@ -60,7 +63,7 @@ ul { list-style: none; }
   color: var(--electric);
   margin-bottom: 12px;
 }
-.eyebrow--light { color: #7DC8FF; }
+.eyebrow--light { color: #4FA8F5; }
 .section-header {
   text-align: center;
   max-width: 620px;
@@ -68,10 +71,11 @@ ul { list-style: none; }
 }
 .section-header h2 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 700;
   color: var(--navy);
   margin-bottom: 16px;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 .section-header--light h2 { color: var(--white); }
 .section-header p { color: var(--text-mid); font-size: 1.05rem; }
@@ -150,16 +154,34 @@ ul { list-style: none; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  gap: 10px;
   color: var(--navy);
-  letter-spacing: -0.01em;
 }
 .logo-mark {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.logo-tagline {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--electric);
-  font-size: 1.4rem;
-  line-height: 1;
+  margin-top: 2px;
 }
 .nav-links {
   display: flex;
@@ -195,8 +217,8 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(26,143,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26,143,255,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(0,120,212,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,120,212,0.06) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
 }
@@ -212,23 +234,24 @@ ul { list-style: none; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--electric);
-  background: rgba(26,143,255,0.12);
+  background: rgba(0,120,212,0.12);
   padding: 6px 14px;
   border-radius: 100px;
-  border: 1px solid rgba(26,143,255,0.25);
+  border: 1px solid rgba(0,120,212,0.25);
   margin-bottom: 28px;
 }
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: 1.05;
+  font-size: clamp(2.1rem, 4.6vw, 3.7rem);
+  font-weight: 800;
+  line-height: 1.12;
   color: var(--white);
   margin-bottom: 24px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 .hero-headline em {
-  font-style: italic;
-  color: #7DC8FF;
+  font-style: normal;
+  color: #4FA8F5;
 }
 .hero-sub {
   font-size: 1.15rem;
@@ -307,8 +330,8 @@ ul { list-style: none; }
   font-size: 0.78rem;
   font-weight: 600;
   color: #A0C4E0;
-  background: rgba(26,143,255,0.1);
-  border: 1px solid rgba(26,143,255,0.2);
+  background: rgba(0,120,212,0.1);
+  border: 1px solid rgba(0,120,212,0.2);
   padding: 5px 14px;
   border-radius: 100px;
   letter-spacing: 0.03em;
@@ -405,7 +428,7 @@ ul { list-style: none; }
   top: 28px;
   bottom: 28px;
   width: 2px;
-  background: linear-gradient(to bottom, var(--electric), rgba(26,143,255,0.1));
+  background: linear-gradient(to bottom, var(--electric), rgba(0,120,212,0.1));
 }
 .process-step {
   display: flex;
@@ -450,8 +473,8 @@ ul { list-style: none; }
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--electric);
-  background: rgba(26,143,255,0.1);
-  border: 1px solid rgba(26,143,255,0.2);
+  background: rgba(0,120,212,0.1);
+  border: 1px solid rgba(0,120,212,0.2);
   padding: 3px 12px;
   border-radius: 100px;
 }
@@ -494,7 +517,7 @@ ul { list-style: none; }
   flex-shrink: 0;
   width: 28px;
   height: 28px;
-  background: rgba(16,185,129,0.1);
+  background: rgba(0,120,212,0.1);
   color: var(--success);
   border-radius: 50%;
   display: flex;
@@ -520,7 +543,7 @@ ul { list-style: none; }
    URGENCY
    ======================== */
 .urgency {
-  background: linear-gradient(135deg, var(--electric-dark) 0%, #0B3A7A 100%);
+  background: linear-gradient(135deg, var(--electric-dark) 0%, #0A2342 100%);
   padding: 64px 0;
 }
 .urgency-inner {
@@ -635,7 +658,7 @@ ul { list-style: none; }
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--electric);
-  box-shadow: 0 0 0 3px rgba(26,143,255,0.12);
+  box-shadow: 0 0 0 3px rgba(0,120,212,0.12);
 }
 .form-group textarea { resize: vertical; }
 .form-note {
@@ -664,20 +687,35 @@ ul { list-style: none; }
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
+  gap: 6px;
   align-items: flex-start;
 }
-.footer-brand .logo-mark { color: var(--electric); }
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.footer-brand .logo-mark { height: 36px; }
+.footer-tagline {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4FA8F5;
+}
 .footer-brand p {
   font-size: 0.85rem;
   color: #6A8FB0;
   font-weight: 400;
   max-width: 220px;
   line-height: 1.5;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 .footer-links {
   display: flex;
